@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 4</title>
+    <title>Auto Parts Order</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
-
 <body>
 
-</body>
+    <header>
+        <h1>Auto Parts Request Form</h1>
+    </header>
 
+    <main>
+        <section id="order-form">
+            <form>
+
+                <fieldset>
+                    <legend>Customer Information</legend>
+                    <label for="full-name">Full Name:</label>
+                    <input id="full-name" type="text" placeholder="Enter your full name" required>
+
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" placeholder="Enter your email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input id="phone" type="tel" placeholder="Enter your phone number" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Vehicle Details</legend>
+                    <label for="make">Car Make:</label>
+                    <select id="make" required>
+                        <option value="">Select Make</option>
+                        <option value="TESLA">Tesla</option>
+                        <option value="BUGATTI">Bugatti</option>
+                        <option value="RIVIAN">Rivian</option>
+                        <option value="PEUGEOT">Peugeot</option>
+                        <option value="CITROEN">Citroën</option>
+                        <option value="FIAT">Fiat</option>
+                        <option value="OPEL">Opel</option>
+                        <option value="SEAT">Seat</option>
+                        <option value="SKODA">Škoda</option>
+                    </select>
+
+                    <label for="model">Car Model:</label>
+                    <input id="model" type="text" placeholder="Enter model" required>
+
+                    <label for="year">Year:</label>
+                    <input id="year" type="number" min="1980" max="2025" required>
+                    <p id="year-error" class="error-message"></p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Order Details</legend>
+                    <label for="part">Spare Part Needed:</label>
+                    <input id="part" type="text" placeholder="Enter the part name" required>
+
+                    <label for="quantity">Quantity:</label>
+                    <input id="quantity" type="number" min="1" max="10" required>
+
+                    <label for="date">Required By:</label>
+                    <input id="date" type="date" required>
+
+                    <label for="comments">Additional Comments:</label>
+                    <textarea id="comments" rows="4" placeholder="Enter any extra details"></textarea>
+                </fieldset>
+
+                <button type="submit">Submit Request</button>
+
+            </form>
+        </section>
+    </main>
+
+</body>
 </html>
+
